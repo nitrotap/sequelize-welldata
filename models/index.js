@@ -48,25 +48,59 @@ const Well = sequelize.define('well', {
 });
 
 const WellData = sequelize.define('wellData', {
+    id: {
+        type: Sequelize.INTEGER,
+        autoIncrement: true,
+        allowNull: false,
+        primaryKey: true,
+    },
     date: {
         type: Sequelize.DATE,
-        allowNull: false,
+
     },
     depth: {
         type: Sequelize.FLOAT,
-        allowNull: false,
+
     },
     pressure: {
         type: Sequelize.FLOAT,
-        allowNull: false,
+
+    },
+    temperature: {
+        type: Sequelize.FLOAT,
+
+    },
+    oil: {
+        type: Sequelize.FLOAT,
+
+    },
+    water: {
+        type: Sequelize.FLOAT,
+
+    },
+    gas: {
+        type: Sequelize.FLOAT,
+
+    },
+    water_cut: {
+        type: Sequelize.FLOAT,
+
+    },
+    gas_oil_ratio: {
+        type: Sequelize.FLOAT,
+
+    },
+    oil_gravity: {
+        type: Sequelize.FLOAT,
+
     },
 });
 
+
+
+
 // User.hasMany(Well, { onDelete: 'cascade' });
 
-
-
-// Well.belongsTo(User);
 // Well.hasMany(WellData, { onDelete: 'cascade' });
 // WellData.belongsTo(Well);
 
