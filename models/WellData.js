@@ -45,6 +45,10 @@ WellData.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
+        comments: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
     },
     {
         sequelize,

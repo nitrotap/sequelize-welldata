@@ -5,7 +5,6 @@ const { User, Well, WellData } = require('../../models');
 // post a new welldata
 router.post('/', (req, res) => {
     WellData.create({
-        well_id: req.body.well_id,
         date: req.body.date,
         time: req.body.time,
         depth: req.body.depth,
